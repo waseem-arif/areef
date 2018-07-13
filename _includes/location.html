@@ -1,0 +1,41 @@
+<section class="section-location">
+        <h1 class="heading-primary heading-primary--main">Location</h1>
+
+        <div id="map">
+
+        </div>
+    </section>
+
+    <!-- GoogleMap Code Starts here -->
+	<script>
+            function initMap () {
+                // map options
+                var options = {
+                    zoom:13,
+                    center:{lat:21.350755,lng:39.900041}
+                }
+                // new Map
+                var map = new google.maps.Map(document.getElementById('map'), options);
+                            
+                //add marker
+                var marker = new google.maps.Marker({
+                    position: {lat:21.350755,lng:39.900041},
+                    map:map
+                });
+                
+                var infoWindow = new google.maps.InfoWindow({
+                    content:'<h3><em>Ashab Areef EST.</em></h1><div><p>Mobile No.: \+966 59 948 2375</p></div>'
+                });
+                
+                marker.addListener('click', function(){
+                    infoWindow.open(map, marker);
+                });
+            }
+        </script>
+        <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCwLxryZOZf4mDTi52UK7ZojfI1if8uNCE&callback=initMap">
+            
+    // lat:21.350755,lng:39.900041
+    //google api key = 'AIzaSyCwLxryZOZf4mDTi52UK7ZojfI1if8uNCE'
+     </script>
+        <!-- GoogleMap Code Ends Here -->

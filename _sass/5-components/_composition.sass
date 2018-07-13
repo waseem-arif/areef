@@ -1,0 +1,55 @@
+/* ---------------------------COMPONENTS -- COMPOSITION -- WILL START FROM HERE ------------------------- */
+
+.composition 
+    position: relative
+    
+    &__photo 
+        width: 55%
+        box-shadow: 0 1.5rem 4rem rgba($colorBlack, 0.4)
+        border-radius: 2px
+        position: absolute
+        z-index: 10
+        +transition(all .3s ease)
+        outline-offset: 1rem
+        +responsive(tabPort)
+            float: left
+            position: relative
+            width: 33.333%
+            box-shadow: 0 1.5rem 3rem rgba($colorBlack, 0.3)
+        &--p01 
+            left: 5rem
+            top: -2.5rem
+            +responsive(tabPort)
+                left: 4rem
+                top: 0
+                +transform (scale(1.2))
+        &--p02 
+            right: 0
+            top: 2rem
+            +responsive(tabPort)
+                right: 0
+                top: 0
+                +transform (scale(1.3))
+                z-index: 50
+        &--p03 
+            left: 25%
+            top: 10rem
+            +responsive(tabPort)
+                top: 0
+                left: -2rem
+                +transform (scale(1.2))
+                
+        
+        &:hover 
+            outline: .7rem solid $colorLogo
+            +transform(scale(1.2) translateY(-1rem))
+            /*transform: scale(1.2) translateY(-1rem);
+            //-moz-transform: scale(1.2) translateY(-1rem);
+            //-webkit-transform: scale(1.2) translateY(-1rem);*/
+            box-shadow: 0 2.5rem 4rem rgba($colorBlack, .8)
+            z-index: 90
+    &:hover &__photo:not(:hover) 
+        +transform(scale(0.9))
+        /* transform: scale(0.9);
+        //-moz-transform: scale(0.9);
+        //-webkit-transform: scale(0.9); */

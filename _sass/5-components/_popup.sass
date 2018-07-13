@@ -1,0 +1,156 @@
+
+
+
+.popup
+    display: absolute
+    top: 0
+    left: 0
+    position: fixed
+    background-color: rgba(darken($colorLogoText, 15), .8)
+    height: 100vh
+    width: 100vw
+    z-index: -10
+    opacity: 0
+    visibility: hidden
+    +transition (all .3s ease)
+
+
+    &__content
+        position: absolute
+        top: 50%
+        left: 50%
+        height: 88vh
+        width: 88vw
+        transform: translate(-50%, -50%)
+        background-color: rgba($colorWhite, .8)
+        border: .5rem
+        &-01
+            display: none
+        &-02
+            display: none
+        &-03
+            display: none
+        &-04
+            display: none
+        &-05
+            display: none
+
+    &__arabicGum--img
+        position: absolute
+        top: 50%
+        left: 50%
+        height: 80%
+        width: 80%
+        //max-height: 80vh
+        //max-width: 80vw
+        transform: translate(-50%, -50%)
+        //background-repeat: no-repeat
+        background-position: center 
+        background-size: cover   
+        &-01
+            +background-image(url("/../images/gall-arabicGum-01.jpg"))
+            
+        &-02
+            +background-image(url("/../images/gall-arabicGum-02.jpg"))
+        &-03
+            +background-image(url("/../images/gall-arabicGum-03.jpg"))
+        &-04
+            +background-image(url("/../images/gall-arabicGum-04.jpg"))
+        &-05
+            +background-image(url("/../images/gall-arabicGum-05.jpg"))   
+
+    &__chickpea--img
+        position: absolute
+        top: 50%
+        left: 50%
+        height: 80%
+        width: 80%
+        //max-height: 80vh
+        //max-width: 80vw
+        transform: translate(-50%, -50%)
+        //background-repeat: no-repeat
+        background-position: center 
+        background-size: cover
+        &-01
+            +background-image(url("/../images/gall-chickpea-01.jpg"))
+            
+        &-02
+            +background-image(url("/../images/gall-chickpea-02.jpg"))
+        &-03
+            +background-image(url("/../images/gall-chickpea-03.jpg"))
+        &-04
+            +background-image(url("/../images/gall-chickpea-04.jpg"))
+        &-05
+            +background-image(url("/../images/gall-chickpea-05.jpg"))       
+
+    &-01:target
+        opacity: 1
+        visibility: visible
+        z-index: 200
+    &-01:target .popup__content-01
+        display: block
+    &-02:target
+        opacity: 1
+        visibility: visible
+        z-index: 200
+    &-02:target .popup__content-02
+        display: block
+    &-03:target
+        opacity: 1
+        visibility: visible
+        z-index: 200
+    &-03:target .popup__content-03
+        display: block
+    &-04:target
+        opacity: 1
+        visibility: visible
+        z-index: 200
+    &-04:target .popup__content-04
+        display: block
+    &-05:target
+        opacity: 1
+        visibility: visible
+        z-index: 200
+    &-05:target .popup__content-05
+        display: block
+
+.btn
+    &__01:target .popup
+        opacity: 0
+        visibility: hidden
+
+
+
+
+.x-close
+    display: block
+    position: absolute
+    top: .4rem
+    right: .4rem
+    padding: 1.5rem 0.4rem
+    //background-color: $colorLogo
+    cursor: pointer
+    .cross,
+    .cross::before,
+    .cross::after 
+        content: ''
+        display: block
+        background-color: darken($colorLogoText, 10)
+        height: .3rem
+        width: 3rem
+        border-radius: 1px
+        
+    .cross
+        transform: translateY(-.2rem) rotate(45deg)
+
+    .cross::before 
+        transform: translateY(0) rotate(-90deg)
+        
+    .cross::after
+        opacity: 0
+
+    &:hover .cross, &:hover .cross::before, &:hover .cross::after
+        background-color: $colorOrange    
+    
+
+

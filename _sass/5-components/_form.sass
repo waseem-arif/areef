@@ -1,0 +1,60 @@
+/* ---------------------------COMPONENTS --FORM -- WILL START FROM HERE ------------------------- */
+.form 
+    width: 100vw
+    justify-content: center
+    display: grid
+    grid-template-rows: repeat(2, min-content)
+    grid-template-columns: repeat(auto-fit, minmax(45rem,min-content))
+    &__group 
+        //margin-right: 1rem
+        grid-column: 1 / 2
+        margin: 0 auto
+    
+    //&__group:not(:last-child) {
+        //margin-bottom: 2rem
+    &__input 
+        margin-bottom: 2.5rem
+        font-family: $mainFont-02
+        font-size: 1.5rem
+        padding: 1.5rem 2rem
+        border-radius: 2px
+        background-color: rgba($colorWhite, .7)
+        border: none
+        border-bottom: .4rem solid transparent
+        width: 40rem
+        display: block
+        &:focus 
+            outline: none
+            box-shadow: 0 1rem 2rem rgba($colorBlack, .1)
+            border-bottom: .4rem solid $colorGreenDark
+            background-color: rgba($colorWhite, .97)
+            
+        &:focus:invalid 
+            border-bottom: .4rem solid $colorOrange
+            
+        &:focus::-webkit-input-placeholder
+            color: $colorGray
+
+    &__label 
+        font-size: 1.4rem
+        color: rgba($colorLogo, .6)
+        font-family: $mainFont
+        font-weight: 500
+        margin-left: 2rem
+        margin-top: -1.8rem
+        display: block
+        @include transition (all .2s ease-in-out)
+
+    &__input:placeholder-shown + &__label 
+        opacity: 0
+        visibility: hidden
+        transform: translateY(-4rem)
+    
+    &__textarea 
+        //margin-left: 1rem
+        margin: auto
+        grid-column: 2/-1
+        //grid-row: 1 / -1
+        margin-bottom: 1rem
+    
+    border-bottom: 2px solid rgba($colorLogo, .6)
