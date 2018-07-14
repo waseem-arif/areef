@@ -2,7 +2,7 @@
 
 .select
     grid-column: 2 / 10
-    margin: 10rem 0rem
+    margin: 0rem 0 10rem 0
     //display: grid
     //grid-template-rows: repeat(2, minmax(min-content, 1fr))
     //grid-template-columns: min-content
@@ -27,8 +27,8 @@
             left: 25%
             +transform (translate(-50%, -50%))
             width: 40rem
-            background-color: rgba($colorLogo, .6)
-            color: $colorLogoText
+            background-color: rgba($colorLogoText, .8)
+            color: $colorGrayLight-01
             padding: 2rem
             font-family: $mainFont
             text-align: justify
@@ -344,6 +344,34 @@
             grid-row: 3 / 7
             grid-column: 3 / 7
             +background-image(url("../images/gall-frankincense-05.jpg"))
+
+    &__hibiscus--img
+        &-01       
+            grid-row: 1 / 5
+            grid-column: 1 / 5
+            +background-image(url("../images/gall-hibiscus-01.jpg"))
+
+
+        &-02
+            grid-row:  1 / 5
+            grid-column: 5 / -1
+            +background-image(url("../images/gall-hibiscus-02.jpg"))
+
+        &-03
+            grid-row: 5 / -1
+            grid-column: 1 / 5
+            +background-image(url("../images/gall-hibiscus-03.jpg"))
+
+        &-04
+            grid-row: 5 / -1
+            grid-column: 5 / -1
+            +background-image(url("../images/gall-hibiscus-04.jpg"))
+
+
+        &-05
+            grid-row: 3 / 7
+            grid-column: 3 / 7
+            +background-image(url("../images/gall-hibiscus-05.jpg"))
         
 
 
