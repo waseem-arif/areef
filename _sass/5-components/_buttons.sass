@@ -1,0 +1,82 @@
+/* ---------------------------COMPONENT --BUTTONS-- WILL START FROM HERE ------------------------- */
+    
+.btn
+    &:link,
+    &:visited 
+        text-transform: uppercase
+        text-decoration: none
+        padding: 1rem 2rem
+        display: block
+        border-radius: .5rem
+        @include transition (all 1s)
+        text-align: center
+        //bottom: 20%
+        //left: 50%
+        //+transform (translate(-50%, -50%))
+        font-size: 1.6rem
+    
+
+    &:hover 
+        @include transform (translateY( -3px))
+        box-shadow: 0 1rem 2rem rgba($colorBlack,.2)
+        //&::after 
+        //    @include transform (scale(1.5))
+        //    opacity: 0
+        
+    
+    &:active 
+        @include transform (translateY(0))
+        box-shadow: 0 .4rem .8rem rgba($colorBlack,.2)
+    
+
+    &--colorLogo
+        background: rgba(darken($colorLogoText,10), .7)
+        color: $colorLogo
+        //&::after 
+        //    background-color: rgba(darken($colorLogoText,15), .9)
+        
+    
+
+    //&::after 
+    //    content: ""
+    //    display: inline-block
+    //    height: 100%
+    //    width: 100%
+    //    border-radius: 10rem
+    //    position: absolute
+    //    top: 0
+    //    left: 0
+    //    z-index: -1
+    //    transition: all .4s
+    
+
+    //&--animate 
+    //    @include animation (moveInBottom .5s ease-in)
+    //    @include animation-fill-mode (backwards)
+    
+
+.btn-text 
+    &:link,
+    &:visited 
+        font-size: 1rem
+        color: $colorLogoText
+        display: inline-block
+        text-decoration: none
+        border-bottom: 1px solid $colorLogoText
+        background-color: $colorWhite
+        padding: .6rem
+        @include transition (all .2s)
+        border-radius: .5rem
+        border: 1px solid rgba($colorLogoText, .5)
+    
+
+    &:hover 
+        background-color: $colorLogoText
+        color: $colorLogo
+        box-shadow: 0 1rem 2rem rgba($colorBlack,.4)
+        @include transform (translateY(-3px))
+
+    &:active 
+        box-shadow: 0 .3rem .8rem rgba($colorBlack,.4)
+        @include transform (translateY(0px))
+    
